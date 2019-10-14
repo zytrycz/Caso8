@@ -12,17 +12,30 @@ package main;
 public class Tupla {
     private int value;
     private int reps;
+    private float percent;
+
+    
 
     public Tupla(int value, int reps) {
         this.value = value;
         this.reps = reps;
     }
-
+    
+    public Tupla(int value, float percent){
+        this.value = value;
+        this.percent = percent;
+    }
+    
+    //getters
     public int getValue() {
         return value;
     }
 
     public int getReps() {
         return reps;
+    }
+    
+    public float getPercent() {
+        return percent;
     }
 }
