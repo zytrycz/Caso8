@@ -14,7 +14,6 @@ public class Tupla {
     private int reps;
     private float percent;
 
-    
 
     public Tupla(int value, int reps) {
         this.value = value;
