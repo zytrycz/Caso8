@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package IMG_Handling;
+package Forms_Handling;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -13,15 +9,21 @@ import java.util.Random;
  * @author jonac
  */
 public class figuras {
-    private final int color;
+    private final Color color;
     private final ArrayList<Integer> xpos=new ArrayList<>();
     private final ArrayList<Integer> ypos=new ArrayList<>();
     private static final int MIN_VERTICES=3;
     private static final int MAX_VERTICES=20;
     private static final Random RANDOM=new Random();
 
-    public figuras(int color) {
+    public figuras(Color color,int pTopY, int pTopX, int pBottomY, int pBottomX ) {
+        if(color==Color.white){
+            System.out.println("whito drivu");
+            
+        }
         this.color = color;
+        
+        generarVertices(pTopY, pTopX, pBottomY, pBottomX);
     }
     
     public void generarVertices(int pTopY, int pTopX, int pBottomY, int pBottomX){
@@ -45,10 +47,8 @@ public class figuras {
         return ypos;
     }
 
-    public int getColor() {
+    public Color getColor() {
         return color;
-    }
-    
-      
+    }     
     
 }
