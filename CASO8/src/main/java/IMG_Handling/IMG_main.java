@@ -17,8 +17,8 @@ import javax.imageio.ImageIO;
  * @author jonac
  */
 public class IMG_main {
-    public static void main(String[] args) {
-    }
+    
+    
         
     
 }

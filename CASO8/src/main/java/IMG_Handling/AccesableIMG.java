@@ -18,7 +18,7 @@ import javax.imageio.ImageIO;
 public class AccesableIMG {
     public ArrayList<Segmento> segmentos;//conjunto de todos los segmentos de la imagen
     public BufferedImage img;
-    private static final int LARGO=32;
+    private static final int LARGO=16;
     private static final int MAXLARGO=1024;
     
     public void readIMG(String filename)throws IOException{//lee la imagen que se le pasa

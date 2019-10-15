@@ -5,20 +5,143 @@
  */
 package main;
 
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author brymo
  */
 public class Globals {
-            int[] colorCodes = new int[] {0,128,139,205,255,25600,32768,32896,35723,49151,52945,64154,65280,65407,65535,65535,1644912,2003199,2142890,2263842,
-                                                    3050327,3100495,3329330,3978097,4251856,4286945,4620980,4734347,4772300,4915330,5597999,6266528,6591981,6697881,
-                                                    6737322,6908265,6970061,7048739,7372944,7833753,8087790,8190976,8388352,8388564,8388608,8388736,8421376,8421504,
-                                                    8528418,8900331,8900346,9055202,9109504,9109643,9127187,9419919,9498256,9662683,9699539,10025880,10040012,10145074,
-                                                    10506797,10824234,11119017,11393254,11403055,11529966,11584734,11591910,12092939,12211667,12357519,
-                                                    12433259,12632256,13047173,13458524,13468991,13789470,13808780,13882323,14204888,14315734,14329120,14381203,14423100,
-                                                    14474460,14524637,14596231,14745599,15132410,15308410,15631086,15657130,15761536,15787660,15792383,
-                                                    15794160,15794175,16032864,16113331,16119260,16119285,16121850,16316671,16416882,16444375,16445670,16448210,
-                                                    16643558,16711680,16711935,16711935,16716947,16729344,16737095,16738740,16744272,16747520,16752762,16753920,16758465,
-                                                    16761035,16766720,16767673,16768685,16770229,16770244,16770273,16772045,16773077,16773365,16774638,16775388,
-                                                    16775885,16775920,16775930,16776960,16777184,16777200,16777215};
+            Map colorCodes = new HashMap();
+
+    public Globals() {
+                   
+            colorCodes.put("IndianRed","CD5C5C");
+            colorCodes.put("LightCoral","F08080");	
+            colorCodes.put("Salmon","FA8072");
+            colorCodes.put("DarkSalmon","E9967A");
+            colorCodes.put("LightSalmon","FFA07A");
+            colorCodes.put("Crimson","DC143C");
+            colorCodes.put("Red","FF0000");
+            colorCodes.put("FireBrick","B22222");	
+            colorCodes.put("DarkRed","8B0000");
+            colorCodes.put("Pink","FFC0CB");
+            colorCodes.put("LightPink","FFB6C1");	
+            colorCodes.put("HotPink","FF69B4");
+            colorCodes.put("DeepPink","FF1493");	
+            colorCodes.put("MediumVioletRed","C71585");	
+            colorCodes.put("PaleVioletRed","DB7093");
+            colorCodes.put("Coral","FF7F50");	
+            colorCodes.put("Tomato","FF6347");	
+            colorCodes.put("OrangeRed","FF4500");	
+            colorCodes.put("DarkOrange","FF8C00");
+            colorCodes.put("Orange","FFA500");
+            colorCodes.put("Gold","FFD700");
+            colorCodes.put("Yellow","FFFF00");	
+            colorCodes.put("LightYellow","FFFFE0");
+            colorCodes.put("LemonChiffon","FFFACD");
+            colorCodes.put("LightGoldenrodYellow","FAFAD2");
+            colorCodes.put("PapayaWhip","FFEFD5");
+            colorCodes.put("Moccasin","FFE4B5");
+            colorCodes.put("PeachPuff","FFDAB9");
+            colorCodes.put("PaleGoldenrod","EEE8AA");
+            colorCodes.put("Khaki","F0E68C");
+            colorCodes.put("DarkKhaki","BDB76B");
+            colorCodes.put("Lavender","E6E6FA");
+            colorCodes.put("Thistle","D8BFD8");
+            colorCodes.put("Plum","DDA0DD");
+            colorCodes.put("Violet","EE82EE");
+            colorCodes.put("Orchid","DA70D6");
+            colorCodes.put("Fuchsia","FF00FF");
+            colorCodes.put("Magenta","FF00FF");
+            colorCodes.put("MediumOrchid","BA55D3");
+            colorCodes.put("MediumPurple","9370DB");
+            colorCodes.put("BlueViolet","8A2BE2");
+            colorCodes.put("DarkViolet","9400D3");
+            colorCodes.put("DarkOrchid","9932CC");
+            colorCodes.put("DarkMagenta","8B008B");
+            colorCodes.put("Purple","800080");
+            colorCodes.put("RebeccaPurple","663399");	
+            colorCodes.put("Indigo","4B0082");
+            colorCodes.put("MediumSlateBlue","7B68EE");
+            colorCodes.put("SlateBlue","6A5ACD");
+            colorCodes.put("DarkSlateBlue","483D8B");
+            colorCodes.put("GreenYellow","ADFF2F");
+            colorCodes.put("Chartreuse","7FFF00");
+            colorCodes.put("LawnGreen","7CFC00");
+            colorCodes.put("Lime","00FF00");
+            colorCodes.put("LimeGreen","32CD32");
+            colorCodes.put("PaleGreen","98FB98");
+            colorCodes.put("LightGree","90EE90");
+            colorCodes.put("MediumSpringGreen","00FA9A");
+            colorCodes.put("SpringGreen","00FF7F");
+            colorCodes.put("MediumSeaGreen","3CB371");
+            colorCodes.put("SeaGreen","2E8B57");
+            colorCodes.put("ForestGreen","228B22"); 
+            colorCodes.put("Green","008000");
+            colorCodes.put("DarkGreen","006400"); 
+            colorCodes.put("YellowGreen","9ACD32");
+            colorCodes.put("OliveDrab","6B8E23");
+            colorCodes.put("Olive","808000");
+            colorCodes.put("DarkOliveGreen","556B2F");	
+            colorCodes.put("MediumAquamarine","66CDAA");
+            colorCodes.put("DarkSeaGreen","8FBC8F");
+            colorCodes.put("LightSeaGreen","20B2AA");
+            colorCodes.put("DarkCyan","008B8B");
+            colorCodes.put("Teal","008080");
+            colorCodes.put("Aqua","00FFFF");
+            colorCodes.put("Cyan","00FFFF");
+            colorCodes.put("LightCyan","E0FFFF");
+            colorCodes.put("PaleTurquoise","AFEEEE");
+            colorCodes.put("Aquamarine","7FFFD4");
+            colorCodes.put("Turquoise","40E0D0");
+            colorCodes.put("MediumTurquoise","48D1CC");	
+            colorCodes.put("DarkTurquoise","00CED1");
+            colorCodes.put("CadetBlue","5F9EA0");
+            colorCodes.put("SteelBlue","4682B4");
+            colorCodes.put("LightSteelBlue","B0C4DE");
+            colorCodes.put("PowderBlue","B0E0E6");
+            colorCodes.put("LightBlue","ADD8E6");
+            colorCodes.put("SkyBlue","87CEEB");
+            colorCodes.put("LightSkyBlue","87CEFA");	
+            colorCodes.put("DeepSkyBlue","00BFF");
+            colorCodes.put("DodgerBlue","1E90FF");
+            colorCodes.put("CornflowerBlue","6495ED");	
+            colorCodes.put("RoyalBlue","4169E1");
+            colorCodes.put("Blue","0000FF");
+            colorCodes.put("MediumBlue","0000CD");
+            colorCodes.put("DarkBlue","00008B");
+            colorCodes.put("Navy","000080");
+            colorCodes.put("MidnightBlu","191970");
+            colorCodes.put("Cornsilk","FFF8DC");
+            colorCodes.put("BlanchedAlmond","FFEBCD");
+            colorCodes.put("Bisque","FFE4C4");
+            colorCodes.put("NavajoWhite","FFDEAD");
+            colorCodes.put("Wheat","F5DEB3");
+            colorCodes.put("BurlyWood","DEB887");	
+            colorCodes.put("Tan","D2B48C");
+            colorCodes.put("RosyBrown","BC8F8F");
+            colorCodes.put("SandyBrown","F4A460");
+            colorCodes.put("Goldenrod","DAA520");
+            colorCodes.put("DarkGoldenrod","B8860B");
+            colorCodes.put("Peru","CD853F");
+            colorCodes.put("Chocolate","D2691E");
+            colorCodes.put("SaddleBrown","8B4513");
+            colorCodes.put("Sienna","A0522D");
+            colorCodes.put("Brown","A52A2A");
+            colorCodes.put("Maroon","800000");
+            colorCodes.put("White","FFFFFF");
+            colorCodes.put("WhiteSmoke","F5F5F5");
+            colorCodes.put("Ivory","FFFFF0");
+            colorCodes.put("MistyRose","FFE4E1");
+            colorCodes.put("Gainsboro","DCDCDC");
+            colorCodes.put("Gray","808080");
+            colorCodes.put("DimGre","696969");
+            colorCodes.put("SlateGray","708090");
+            colorCodes.put("DarkSlateGray","2F4F4F");
+            colorCodes.put("Black","000000");
+    }
+ 
 }
