@@ -16,7 +16,7 @@ import main.Tupla;
 
 public class Bits {
     private ArrayList<Integer> poblacion = new ArrayList<Integer>();
-    
+    public int contadorGeneral = 0;//=========================================
     private ArrayList<Tupla> goalTable = new ArrayList<>();
     private ArrayList<Tupla> bitTable = new ArrayList<>();
     
@@ -33,10 +33,11 @@ public class Bits {
                     poblacion.add( (int) (Math.random()*256));
         }
         poblacion.sort(null);
-        aproximar();
+        fitness();
     }
     
    public void fitness(){
+       contadorGeneral++;
        ArrayList<Tupla> temp = new ArrayList<>();
         int value = poblacion.get(0);
         int reps =1;
@@ -67,21 +68,26 @@ public class Bits {
         
         int cont =0;
        for (Tupla element : subTable){
-           if ( Math.abs(element.getPercent() - goalTable.get(cont).getPercent() ) < 0.05){
+           if ( Math.abs(element.getPercent() - goalTable.get(cont).getPercent() ) <= 0.03){
                 cont++;
            }
            else{
-               if ( Math.abs(element.getPercent() - goalTable.get(cont).getPercent() ) > 0.05){
-                   
+               if ( Math.abs(element.getPercent() - goalTable.get(cont).getPercent() ) > 0.03){
+                   int rand =  (int) (Math.random()*( (Math.abs(element.getPercent() - goalTable.get(cont).getPercent() ))*poblacion.size()/100));
+                   for (int index = 0; index< rand; index++){
+                            reproduce(poblacion.indexOf( (int) (Math.random()*poblacion.size())), poblacion.indexOf( (int) (Math.random()*poblacion.size()))) ;
+                   }
            }
            }
+           
+           if (cont == goalTable.size()){
+               System.out.print(contadorGeneral);
+           }
+           
        }
    }
     
-    public void aproximar(){
-        
-    }
-    
+
     public  int modifyBit(int number, int pos,  int bit) 
         { 
             int mask = 1 <<pos; 
@@ -107,6 +113,9 @@ public class Bits {
         }
         firstBorn = mutar(firstBorn);
         secondBorn = mutar(secondBorn);
+        poblacion.add(firstBorn);
+        poblacion.add(secondBorn);
+        fitness();
     }
     
     private int mutar(int pMutar){
